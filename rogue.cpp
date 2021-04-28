@@ -23,6 +23,19 @@ void Rogue::Blindside(Entity * target)
     Attack(target, 20, "Blindside");
 }
 
+void Rogue::Daggerfall(Entity * target)
+{
+    //attempt at using damage cap, if this does not work will just use GetAgility()*0.5 instead
+    if (9+(GetAgility()*0.5)<=14)
+    {
+        Attack (target, 9+(GetAgility()*0.5), "Ebony Dagger");
+    }
+    else 
+    {
+        Attack(target, 14, "Ebony Dagger");
+    }
+}
+
 void Rogue::OutputStatus() const
 {
     std::cout << Class() << ": " << this->Name()
@@ -62,6 +75,11 @@ void Rogue::UseAction(Entity * target, const std::string& spellName, const std::
     if(spellName == "blindside")
     {
         Blindside(target);
+        return;
+    }
+    if (spellName=="daggerfall") //if there are problems when running, change this to "ebony_dagger" and change function name to that as well
+    {
+        Daggerfall(target);
         return;
     }
 

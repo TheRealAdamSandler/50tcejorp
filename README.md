@@ -6,6 +6,8 @@ priest->(fist) that does flat 3 damage, no modifier
 warrior->(fist) that does 2 damage, with 1.5 modifier for strength
 mage->(sunder) that does 10 damage, with 0.5 modifier (cap at 20 if possible)
 
+CHANGES TO PLAN: priest ability renamed to "slash" has same effect, warrior named simply "fist"
+
 if required
 monster->(weak attack) that does 2 damage, no modifier
 

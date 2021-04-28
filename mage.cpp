@@ -20,6 +20,17 @@ void Mage::MagicMissiles(Entity *target)
     Attack(target, GetIntelligence() * 0.5, "Magic Missile");
     Attack(target, GetIntelligence() * 0.5, "Magic Missile");
 }
+void Mage::Sunder(Entity * target)
+{
+    if (10+(GetIntelligence()*0.5)<=20)
+    {
+        Attack (target, 10+(GetIntelligence()*0.5), "Sunder");
+    }
+    else 
+    {
+        Attack (target, 20, "Sunder");
+    }
+}
 
 void Mage::OutputStatus() const
 {
@@ -51,6 +62,11 @@ void Mage::UseAction(Entity * target, const std::string& spellName, const std::s
     if(spellName == "magic_missile")
     {
         MagicMissiles(target);
+        return;
+    }
+    if (spellName=="sunder")
+    {
+        Sunder(target);
         return;
     }
     errorFindingAbility(spellName);
