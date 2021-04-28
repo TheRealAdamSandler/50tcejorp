@@ -11,6 +11,7 @@ private:
 
     void Smite(Entity * target);
     void GreaterHeal(Entity * target);
+    void PriestFist (Entity * target);
 
 
 public:
