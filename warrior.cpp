@@ -20,6 +20,7 @@ void Warrior::ShieldSmash(Entity * target)
 
 void Warrior::Fist(Entity * target)
 {
+    //base 2, multiplying by strength with a scale of 1.5
     Attack(target, 2*(GetStrength()*1.5), "Fist");
 }
 
